@@ -23,5 +23,8 @@ e BEPS.jl
 
 ## Requirements
 
+- Everything Open HTTP Server
+  ![](images/README/Everything_HTTP.png)
+
 - R (>= 4.2.0)
 - R packages: `httr`, `rvest` and `dplyr`

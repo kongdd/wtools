@@ -1,23 +1,17 @@
-# superClassDepth({})
-suppressMessages({
-  library(httr)
-  library(rvest)
-  library(dplyr)
-  # library(glue)
-  # library(xml2)
-  # library(magrittr)
-  # library(Ipaper)
-})
-
 #' @param kw string
 #' @param p page, integer
 args <- commandArgs(trailingOnly = TRUE)
 
-# Print all arguments
+suppressMessages({
+  library(httr)
+  library(rvest)
+  library(dplyr)
+  # library(xml2)
+})
+
 kw = args[1]
 p = 1
 if (length(args) >= 2) p = as.integer(args[2])
-# print(args)
 
 offset <- (p - 1) * 32
 url <- sprintf("http://localhost/?search=%s&offset=%s", kw, offset)
@@ -32,4 +26,3 @@ d <- r[4:n, ] |>
   setNames(c("name", "dir", "size", "date")) |> 
   mutate(path = paste0(dir, "\\", name) |> gsub("\\\\", "/", x = _))
 d$path
-# print("hello world")

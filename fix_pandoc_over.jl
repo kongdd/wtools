@@ -1,10 +1,5 @@
 @time using Ipaper
 
-# function replace_part_over(x::AbstractString)
-#   replace(x,
-#     r"{\\partial (.*?)[ ]*\\over[ ]*\\partial (.*?)}" =>
-#       s"\\frac{\\partial \1}{\\partial \2}")
-# end
 function replace_over(x::AbstractString)
   s = "[^{}]*"
   p = Regex("{($s)[ ]*\\\\over[ ]*($s)}")
@@ -38,3 +33,9 @@ lines = readlines(fin)
 #   end
 # end
 # writelines(lines, "ch4_01_out.md")
+
+# function replace_part_over(x::AbstractString)
+#   replace(x,
+#     r"{\\partial (.*?)[ ]*\\over[ ]*\\partial (.*?)}" =>
+#       s"\\frac{\\partial \1}{\\partial \2}")
+# end
