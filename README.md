@@ -1,10 +1,30 @@
-# `Everything` File Search in the Terminal
+<h1>基于R和Julia的命令行指令</h1>
+
+# 1. Installation
+
+- 然后将repo所在的路径，添加到环境变量，即可使用这些命令。
+
+- 安装`R (>= 4.2.0)`，以及一些常用的R包（缺失的包请按照提醒安装）
+
+- 安装Julia（缺失的包请按照提醒安装）
+
+
+# 2. Example
+
+## 2.1. `Everything` File Search in the Terminal
 
 通过调用`Everything` HTTP API实现在命令行搜索文件，具体代码见[e.R](e.R)。
 
 这也是如何将R语言打造成脚本语言的一个案例。
 
-## Example
+### 2.1.1. Requirements
+
+- Everything Open HTTP Server
+  ![](images/README/Everything_HTTP.png)
+
+- R packages: `httr`, `rvest` and `dplyr`
+
+### 2.1.2. Usage
 
 ```powershell
 e "class CUG hydroMet"
@@ -21,10 +41,7 @@ e BEPS.jl
 # [3] "Z:/DATA/Soil Moisture(2018-2022)/scripts/s2_BEPS.jl"
 ```
 
-## Requirements
+# 3. TODO
 
-- Everything Open HTTP Server
-  ![](images/README/Everything_HTTP.png)
-
-- R (>= 4.2.0)
-- R packages: `httr`, `rvest` and `dplyr`
+- [ ] 编写合并`excel类`的文件的脚本
+- [ ] `csv编码格式`修改脚本
