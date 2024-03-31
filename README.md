@@ -2,18 +2,18 @@
 
 # 1. Installation
 
-- 然后将repo所在的路径，添加到环境变量，即可使用这些命令。
+- 然后将`app`所在的路径，添加到环境变量，即可使用这些命令。
 
 - 安装`R (>= 4.2.0)`，以及一些常用的R包（缺失的包请按照提醒安装）
 
-- 安装Julia（缺失的包请按照提醒安装）
+- 安装`Julia`（缺失的包请按照提醒安装）
 
 
 # 2. Example
 
 ## 2.1. `Everything` File Search in the Terminal
 
-通过调用`Everything` HTTP API实现在命令行搜索文件，具体代码见[e.R](e.R)。
+通过调用`Everything` HTTP API实现在命令行搜索文件，具体代码见[e.R](src/e.R)。
 
 这也是如何将R语言打造成脚本语言的一个案例。
 
