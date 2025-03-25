@@ -16,6 +16,7 @@ if (length(args) >= 2) p = as.integer(args[2])
 offset <- (p - 1) * 32
 url <- sprintf("http://localhost/?search=%s&offset=%s", kw, offset)
 
+# print(url)
 doc <- GET(url) |> content()
 r <- rvest::html_table(doc)[[1]]
 
